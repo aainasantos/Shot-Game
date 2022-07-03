@@ -1,0 +1,95 @@
+body{
+    background: #d3cdcd;
+    text-align: center;
+  }
+
+span {
+    margin: auto ;
+    font-size: clamp(3rem, 3vw, 6rem);
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+.container{
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    height: 100vh;
+}
+
+.container .cube{
+    position: relative;
+    left: 45%;
+    top: 40%;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: rotateX(135deg) rotateY(-217deg) rotateZ(-88deg);
+    ; 
+}
+
+.container .cube div{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border:2px solid #eee;
+    font-size: 32px;
+    background-color: rgb(238, 248, 182)
+}
+
+.container .cube .front{
+    transform: translateZ(100px);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/2-cups.png);
+    border-radius: 5%;
+}
+.container .cube .back{
+    transform: translateZ(-100px) rotateY(180deg);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/at-will.png);
+    border-radius: 5%;
+  }
+.container .cube .right{
+    transform-origin: top right;
+    transform: rotateY(-270deg) translateX(100px);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/bottom-up.png);
+    border-radius: 5%;
+  }
+.container .cube .left{
+    transform-origin: center left;
+    transform: rotateY(270deg) translateX(-100px);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/half.png);
+    border-radius: 5%;
+  }
+.container .cube .top{
+    transform-origin: top center;
+    transform: rotateX(-270deg) translateY(-100px);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/No.png);
+    border-radius: 5%;
+  }
+.container .cube .bottom{
+    transform-origin: bottom center;
+    transform: rotateX(270deg) translateY(100px);
+    background-image: url(file:///C:/Users/Code%20Once/Desktop/pre-project/shot-game/assets/images/sip.png);
+    border-radius: 5%;
+  }
+  
+@keyframes animate {
+  25%{
+    transform: rotateX(45deg) rotateY(65deg) rotateZ(35deg);
+    top: 0%;
+  }
+  50%{
+    transform: rotateX(145deg) rotateY(165deg) rotateZ(135deg);
+    top: 30%;
+  }
+  75%{
+    transform: rotateX(276deg) rotateY(256deg) rotateZ(246deg);
+    top: 45%;
+  }
+  100%{
+    transform: rotateX(376deg) rotateY(356deg) rotateZ(346deg);
+    top: 60%;
+  }
+}

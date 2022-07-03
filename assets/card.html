@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+    <header>
+        <h2>Play until you drunk!</h2>
+        <button class="btn add" onclick="showForm()">Add</button>
+        <button class="btn back" onclick="back()">back</button>
+    </header>        
+    <div class="card">
+        <div id="turn">
+            <div class="action">
+                <p id="dare"></p>
+            </div> 
+            <button onclick="play()">Play</button>
+        </div>
+        <form>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button type="button" onclick="add()">add</button>
+        </form>
+    </div>     
+    <footer>
+           <img src="images/addiction.png" alt="">
+           <p>Made with 💗 by Kulit!</p>
+    </footer> 
+    <script src="card.js"></script>
+ </body>
+</html>

@@ -1,0 +1,20 @@
+html, body{
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #e24e4e;
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: content-box;
+}
+
+h1 {
+    font-size: clamp(3rem, 4vw, 6rem);
+    padding: 5% 0;
+}
+
+a {
+    color: rgb(43, 34, 34);
+    text-decoration: none;
+}

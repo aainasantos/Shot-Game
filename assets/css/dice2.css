@@ -1,0 +1,173 @@
+body{
+  background: #d3cdcd;
+    text-align: center;
+  }
+
+button {
+  margin: 3% auto;
+  padding: 1% 3%;
+  background-color: rgb(160, 248, 133);
+  border-radius: 5%;
+}
+
+button:hover{
+  background-color: rgb(66, 245, 185);
+}
+
+  .container{
+    font-family: 'fontawesome';
+    height: 70vh;
+    display: flex;
+  }
+
+  .dare{
+    display: none;
+    margin: auto;
+    font-size: clamp(2rem, 4vw, 6rem);
+    width: 80%;
+  }
+
+  .container .dice{
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: rotateX(135deg) rotateY(-217deg) rotateZ(-88deg);
+  }
+
+  .container .dice div{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border:2px solid #eee;
+  }
+
+  .container .dice .front{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice1.png);
+    background-size: contain;
+    transform: translateZ(100px);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+  .container .dice .back{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice2.png);
+    background-size: contain;
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+  .container .dice .right{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice3.png);
+    background-size: contain;
+    transform-origin: top right;
+    transform: rotateY(-270deg) translateX(100px);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+  .container .dice .left{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice4.png);
+    background-size: contain;
+    transform-origin: center left;
+    transform: rotateY(270deg) translateX(-100px);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+  .container .dice .top{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice5.png);
+    background-size: contain;
+    transform-origin: top center;
+    transform: rotateX(-270deg) translateY(-100px);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+  .container .dice .bottom{
+    background: url(file:///C:/Users/Code%20Once/Desktop/pre-project/dice2/images/dice6.png);
+    background-size: contain;
+    transform-origin: bottom center;
+    transform: rotateX(270deg) translateY(100px);
+    background-color: rgb(218, 31, 31);
+    border-radius: 5%;
+  }
+
+  #dice1 {
+    margin: 20% 3% auto auto ;
+  }
+
+  #dice1-1 {
+    margin: 15% 5% auto auto ;
+  }
+  
+  @keyframes animate {
+  25%{
+    transform: rotateX(45deg) rotateY(65deg) rotateZ(35deg);
+    left: 10%;
+  }
+  50%{
+    transform: rotateX(145deg) rotateY(165deg) rotateZ(135deg);
+    left: 30%;
+  }
+  75%{
+    transform: rotateX(276deg) rotateY(256deg) rotateZ(246deg);
+    left: 45%;
+  }
+  100%{
+    transform: rotateX(376deg) rotateY(356deg) rotateZ(346deg);
+    left: 60%;
+  }
+}
+
+@keyframes animate2 {
+  25%{
+    transform: rotateX(45deg) rotateY(65deg) rotateZ(35deg);
+    right: 10%;
+    bottom: 15%;
+  }
+  50%{
+    transform: rotateX(145deg) rotateY(165deg) rotateZ(135deg);
+    right: 15%;
+  }
+  75%{
+    transform: rotateX(276deg) rotateY(256deg) rotateZ(246deg);
+    right: 45%;
+  }
+  100%{
+    transform: rotateX(376deg) rotateY(356deg) rotateZ(346deg);
+    right: 60%;
+  }
+}
+
+
+@media (max-width: 540px){
+  button{
+    margin-bottom: 30%;
+  }
+  .container .dice{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+  .container .dice .front{
+    transform: translateZ(50px);
+  }
+  .container .dice .back{
+    transform: translateZ(-50px) rotateY(180deg);
+  }
+  .container .dice .right{
+    transform: rotateY(-270deg) translateX(50px);
+  }
+  .container .dice .left{
+    transform: rotateY(270deg) translateX(-50px);
+  }
+  .container .dice .top{
+    transform: rotateX(-270deg) translateY(-50px);
+  }
+  .container .dice .bottom{
+    transform: rotateX(270deg) translateY(50px);
+  }
+  
+}
+
